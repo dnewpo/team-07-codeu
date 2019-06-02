@@ -1,4 +1,5 @@
 package com.google.codeu.servlets;
+import com.google.codeu.data.Datastore;
 
 import java.io.IOException;
 import javax.servlet.annotation.WebServlet;
@@ -19,15 +20,4 @@ public class UserListServlet extends HttpServlet {
     response.getOutputStream().println("this will be my user list");
   }
 
-  public Set<String> getUsers(){
-      Set<String> users = new HashSet<>();
-      Query query = new Query("Message");
-      PreparedQuery results = datastore.prepare(query);
-      for(Entity entity : results.asIterable()) {
-          users.add((String) entity.getProperty("user"));
-      }
-      return users;
-  }
-
- // System.out.println(getUsers());
 }
