@@ -58,7 +58,7 @@ public class MessageServlet extends HttpServlet {
       return;
     }
 
-    List<Message> messages = datastore.getMessages(user);
+    List<Message> messages = datastore.getAllMessages();
     Gson gson = new Gson();
     String json = gson.toJson(messages);
 
