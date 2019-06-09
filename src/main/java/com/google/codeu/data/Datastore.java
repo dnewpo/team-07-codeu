@@ -59,7 +59,7 @@ public class Datastore {
      List<Message> messages = new ArrayList<>();
      Query query =
         new Query("Message")
-            .setFilter(new Query.FilterPredicate("user", FilterOperator.EQAUL, user))
+            .setFilter(new Query.FilterPredicate("user", FilterOperator.EQUAL, user))
             .addSort("timestamp", SortDirection.DESCENDING);
      PreparedQuery results = datastore.prepare(query);
 
