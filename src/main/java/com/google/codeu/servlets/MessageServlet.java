@@ -77,6 +77,14 @@ public class MessageServlet extends HttpServlet {
 
     String user = userService.getCurrentUser().getEmail();
     String text = Jsoup.clean(request.getParameter("text"), Whitelist.none());
+    text = text.replaceAll("\\[b\\]", "<strong>"); // bold
+    text = text.replaceAll("\\[/b\\]", "</strong>");
+    text = text.replaceAll("\\[i\\]", "<em>"); // italic
+    text = text.replaceAll("\\[/i\\]", "</em>");
+    text = text.replaceAll("\\[u\\]", "<u>"); // underline
+    text = text.replaceAll("\\[/u\\]", "</u>");
+    text = text.replaceAll("\\[br\\]", "<br>"); // linebreak
+
 
     String regex = "(https?://\\S+\\.(png|jpg))";
     String replacement = "<img src=\"$1\" />";
