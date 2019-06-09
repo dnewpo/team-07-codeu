@@ -80,7 +80,7 @@ function buildMessageDiv(message) {
 
   const bodyDiv = document.createElement('div');
   bodyDiv.classList.add('message-body');
-  bodyDiv.innerHTML = message.text;
+  bodyDiv.innerHTML = "<p>"+message.text+"</p>";
 
   const messageDiv = document.createElement('div');
   messageDiv.classList.add('message-div');
