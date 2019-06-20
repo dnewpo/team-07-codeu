@@ -21,6 +21,26 @@
   width: 100%;
 }
 
+#map {
+  width: 350px;
+  height: 350px;
+  border: thin solid black;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Sets the user profile picture and map side by side. */
+.wrapper {
+  display: grid;
+  grid-column-gap: 70px;
+  grid-template-columns: auto auto;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
 /* Give each message a rounded border. */
 .message-div {
   border: thin solid black;
