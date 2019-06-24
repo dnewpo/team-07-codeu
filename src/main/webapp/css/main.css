@@ -15,8 +15,11 @@
  */
 
 /* Prevent the page from becoming too wide. */
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
 body {
   max-width: 600px;
+  background-color: #edfff6
 }
 
 /* Remove bullet points from navigation bar. */
@@ -28,5 +31,26 @@ nav ul {
 /* Keep navigation menu on one line. */
 nav li {
   display: inline-block;
-  margin-right: 10px
+  margin-right: 10px;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight:100;
+  padding: 20px;
+}
+
+h2 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  padding-left: 20px;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  padding-left: 20px;
+}
+
+ul {
+  font-family: 'Roboto', sans-serif;
 }
