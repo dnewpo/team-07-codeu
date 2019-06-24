@@ -7,52 +7,34 @@
   <!--This line loads the Google Maps library -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsJSF6Nk4a-dT8609e1u3vl2ImEVJBm3c"></script>
   <script>
-    /** Creates a map that shows a Google Landmark. */
-    function createMap(){
-      const map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 37.422, lng: -122.084},
-        zoom: 16
-      });
+    function createBobaSightingsMap(){
+      fetch('/bayarea_boba_spots').then(function(response) {
+        return response.json();
+      }).then((bobaSightings) => {
 
-      addLandmark(map, 37.423829, -122.092154, 'Google West Campus',
-          'Google West Campus is home to YouTube and Maps.')
-    }
-    
-    /** Adds a marker that shows an info window when clicked. */
-    function addLandmark(map, lat, lng, title, description){
-      const marker = new google.maps.Marker({
-        position: {lat: lat, lng: lng},
-        map: map,
-        title: title
-      });
-      const infoWindow = new google.maps.InfoWindow({
-        content: description
-      });
-      marker.addListener('click', function() {
-        infoWindow.open(map, marker);
+        const map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 35.78613674, lng: -119.4491591},
+          zoom:7
+        });
+
+        bobaSightings.forEach((bobaSighting) => {
+          new google.maps.Marker({
+            position: {lat: bobaSighting.lat, lng: bobaSighting.lng},
+            map: map
+          });
+        });
       });
     }
   </script>
   <style>
-    #map {
+    #map{
       width: 500px;
       height: 500px;
-      border: thin solid black;
     }
   </style>
 </head>
-<body onload="createMap();">
-  <!-- Adds the navigation bar to the top of the page -->
-  <nav>
-    <ul id="navigation">
-      <li><a href="/">Home</a></li>
-      <li><a href="/aboutus.html">About Our Team</a></li>
-      <li><a href="/maps.html">Our Map</a></li>
-      <li><a href="/community.html">Community Page</a></li>
-    </ul>
-  </nav>
-  <h1>Our Google Map</h1>
-  <div id="map"></div>
-  <p>This page shows a Google Map!</p>
+<body onload="createBobaSightingsMap();">
+ <h1>Boba Spots in The Bay Area</h1>
+ <div id="map"></div>
 </body>
 </html>
