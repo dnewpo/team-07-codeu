@@ -98,3 +98,16 @@ function buildUI() {
   ClassicEditor.create(document.getElementById('message-input'), config);
   fetchMessages();
 }
+
+/** Fetches Blobstore URL **/
+function fetchBlobstoreUrlAndShowForm() {
+        fetch('/blobstore-upload-url')
+          .then((response) => {
+            return response.text();
+          })
+          .then((imageUploadUrl) => {
+            const messageForm = document.getElementById('my-form');
+            messageForm.action = imageUploadUrl;
+            messageForm.classList.remove('hidden');
+          });
+}

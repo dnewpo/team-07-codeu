@@ -24,11 +24,11 @@
 
       /**
        * Builds a list element that contains a link to a user page, e.g.
-       * <li><a href="/user-page.html?user=test@example.com">test@example.com</a></li>
+       * <li><a href="/user-page.jsp?user=test@example.com">test@example.com</a></li>
        */
       function buildUserListItem(user){
         const userLink = document.createElement('a');
-        userLink.setAttribute('href', '/user-page.html?user=' + user);
+        userLink.setAttribute('href', '/user-page.jsp?user=' + user);
         userLink.appendChild(document.createTextNode(user));
         const userListItem = document.createElement('li');
         userListItem.appendChild(userLink);
