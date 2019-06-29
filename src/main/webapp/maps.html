@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Maps Page</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <script src="/js/navigation-loader.js"></script>
+  <!--This line loads the Google Maps library -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsJSF6Nk4a-dT8609e1u3vl2ImEVJBm3c"></script>
+  <script>
+    function createBobaSightingsMap(){
+      fetch('/bayarea_boba_spots').then(function(response) {
+        return response.json();
+      }).then((bobaSightings) => {
+
+        const map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 35.78613674, lng: -119.4491591},
+          zoom:7
+        });
+
+        bobaSightings.forEach((bobaSighting) => {
+          new google.maps.Marker({
+            position: {lat: bobaSighting.lat, lng: bobaSighting.lng},
+            map: map
+          });
+        });
+      });
+    }
+  </script>
+  <style>
+    #map{
+      width: 500px;
+      height: 500px;
+    }
+  </style>
+</head>
+<body onload="createBobaSightingsMap();">
+ <h1>Boba Spots in The Bay Area</h1>
+ <div id="map"></div>
+</body>
+</html>
