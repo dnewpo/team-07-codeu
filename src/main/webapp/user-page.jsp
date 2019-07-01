@@ -28,18 +28,41 @@ limitations under the License.
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/user-page.css">
     <script src="/js/user-page-loader.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/11.2.0/classic/ckeditor.js"></script>
   </head>
   <body onload="buildUI();">
     <nav>
-      <ul id="navigation">
-        <li><a href="/">Home</a></li>
-        <li><a href="/aboutus.html">About Our Team</a></li>
+      <ul id="navigation" class="darkbar">
+        <li><a class="barelements" href="/">Home</a></li>
+        <li><a class="barelements" href="/aboutus.html">About Our Team</a></li>
+        <li><a class="barelements" href="/maps.html">Our Map</a></li>
+        <li><a class="barelements" href="/community.html">Community Page</a></li>
       </ul>
     </nav>
-    <h1 id="page-title">User Page</h1>
-
+     <!-- This allows the user's image and map to be displayed side by side-->
+     <div class="wrapper">
+      <div>
+        <h1 id="page-title">User Page</h1>
+        <img src="newUser.jpg" height="350" width="350">
+      </div>
+      <div>
+        <h1>User Map</h1>
+        <div id="map"></div>
+        <script>
+          function createMap(){
+            const map = new google.maps.Map(document.getElementById('map'), {
+              center: {lat: 37.422, lng: -122.084},
+              zoom: 16
+            });
+          }
+        </script>
+        <script async def
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsJSF6Nk4a-dT8609e1u3vl2ImEVJBm3c&callback=createMap">
+        </script>
+      </div>
+    </div>
     <form method="POST" enctype="multipart/form-data" action="<%= uploadUrl %>">
-          <p>Type some text:</p>
+          <p>Enter a new message:</p>
           <textarea name="text" id="message-input"></textarea>
           <br/>
           <p>Upload an image:</p>
