@@ -19,6 +19,7 @@
 #message-input {
   height: 100px;
   width: 100%;
+  max-width: 600px;
 }
 
 #map {
@@ -59,6 +60,14 @@ body {
    isn't too close to the border. */
 .message-body {
   margin: 5px;
+}
+
+p {
+  padding: 0px;
+}
+
+form {
+  margin-left: 20px;
 }
 
 /* Use this to hide certain elements like forms if the

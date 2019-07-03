@@ -149,8 +149,9 @@ limitations under the License.
           <button>Submit</button>
         </form>
     <hr/>
-
+  <div id="content">
+    <h2>My Posts</h2>
     <div id="message-container">Loading...</div>
-
+  </div>
   </body>
 </html>
