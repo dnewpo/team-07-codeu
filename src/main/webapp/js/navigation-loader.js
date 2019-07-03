@@ -49,7 +49,7 @@ function addLoginOrLogoutLinkToNavigation() {
  * @return {Element} li element
  */
 function createListItem(childElement) {
-  const listItemElement = document.createElement('li');
+  const listItemElement = document.createElement('logStatus');
   listItemElement.appendChild(childElement);
   return listItemElement;
 }

@@ -46,6 +46,7 @@ body {
   border: thin solid black;
   border-radius: 5px;
   margin: 20px;
+  max-width: 600px;
 }
 
 /* Add a bottom border to the message header. */
