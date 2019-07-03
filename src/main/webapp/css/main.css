@@ -31,7 +31,7 @@ nav ul {
 /* Keep navigation menu on one line. */
 nav li {
   display: inline-block;
-  margin-right: 10px;
+  margin-left: 20px;
 }
 
 h1 {

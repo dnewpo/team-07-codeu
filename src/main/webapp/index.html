@@ -20,9 +20,11 @@ limitations under the License.
     <meta charset="UTF-8">
     <title>CodeU 2019 Starter Project</title>
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/user-page.css">
     <script src="/js/navigation-loader.js"></script>
+    <script src="/js/public-feed.js"></script>
   </head>
-  <body onload="addLoginOrLogoutLinkToNavigation();">
+  <body onload="addLoginOrLogoutLinkToNavigation(); buildUI();">
     <nav>
       <ul id="navigation">
         <li><a href="/">Home</a></li>
@@ -37,5 +39,10 @@ limitations under the License.
     their URL.</p>
     <p>This is your code now! Feel free to make changes, and don't be afraid to get creative!
     You could start by modifying this page to tell the world more about your team.</p>
+
+    <div id="content">
+     <h2>Check out what everyone's eating!</h2>
+     <div id="message-container">Loading...</div>
+    </div>
   </body>
 </html>
