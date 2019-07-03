@@ -45,7 +45,7 @@ body {
 .message-div {
   border: thin solid black;
   border-radius: 5px;
-  margin-top: 20px;
+  margin: 20px;
 }
 
 /* Add a bottom border to the message header. */
