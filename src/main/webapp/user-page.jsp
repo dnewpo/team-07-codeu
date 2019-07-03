@@ -53,7 +53,7 @@ limitations under the License.
           /* Editable marker that displays when a user clicks in the map. */
           let editMarker;
           function createMap(){
-            const map = new google.maps.Map(document.getElementById('map'), {
+            map = new google.maps.Map(document.getElementById('map'), {
               center: {lat: 37.422, lng: -122.084},
               zoom: 16
             });
