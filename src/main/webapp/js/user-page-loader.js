@@ -80,7 +80,7 @@ function buildMessageDiv(message) {
 
   const bodyDiv = document.createElement('div');
   bodyDiv.classList.add('message-body');
-  bodyDiv.innerHTML = "<p>"+message.text+"</p>";
+  bodyDiv.innerHTML = message.text;
 
   const messageDiv = document.createElement('div');
   messageDiv.classList.add('message-div');
@@ -94,20 +94,5 @@ function buildMessageDiv(message) {
 function buildUI() {
   setPageTitle();
   showMessageFormIfViewingSelf();
-  const config = {removePlugins: [ 'ImageUpload' ]};
-  ClassicEditor.create(document.getElementById('message-input'), config);
   fetchMessages();
-}
-
-/** Fetches Blobstore URL **/
-function fetchBlobstoreUrlAndShowForm() {
-        fetch('/blobstore-upload-url')
-          .then((response) => {
-            return response.text();
-          })
-          .then((imageUploadUrl) => {
-            const messageForm = document.getElementById('my-form');
-            messageForm.action = imageUploadUrl;
-            messageForm.classList.remove('hidden');
-          });
 }
