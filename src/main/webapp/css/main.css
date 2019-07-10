@@ -60,10 +60,10 @@ ul {
   font-family: 'Roboto', sans-serif;
 }
 
-
 logStatus {
   float: right;
   padding-right: 20px;
+}
 
 .darkbar {
   list-style-type: none;
