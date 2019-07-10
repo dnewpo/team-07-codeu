@@ -33,6 +33,11 @@ nav li {
   margin-left: 20px;
 }
 
+nav li a {
+  display: block;
+  text-decoration: none;
+}
+
 h1 {
   font-family: 'Lato', sans-serif;
   font-weight:100;
@@ -55,7 +60,27 @@ ul {
   font-family: 'Roboto', sans-serif;
 }
 
+
 logStatus {
   float: right;
   padding-right: 20px;
+
+.darkbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.barelements {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
 }

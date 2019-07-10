@@ -32,15 +32,15 @@ limitations under the License.
   </head>
   <body onload="buildUI();">
     <nav>
-      <ul id="navigation">
-        <li><a href="/">Home</a></li>
-        <li><a href="/aboutus.html">About Our Team</a></li>
-        <li><a href="/maps.html">In The Bay Area?</a></li>
-        <li><a href="/community.html">Community Page</a></li>
+      <ul id="navigation" class="darkbar">
+        <li><a class="barelements" href="/">Home</a></li>
+        <li><a class="barelements" href="/aboutus.html">About Our Team</a></li>
+        <li><a class="barelements" href="/maps.html">Our Map</a></li>
+        <li><a class="barelements" href="/community.html">Community Page</a></li>
       </ul>
     </nav>
-    <!-- This allows the user's image and map to be displayed side by side-->
-    <div class="wrapper">
+     <!-- This allows the user's image and map to be displayed side by side-->
+     <div class="wrapper">
       <div>
         <h1 id="page-title">User Page</h1>
         <img src="newUser.jpg" height="350" width="350">
@@ -138,9 +138,12 @@ limitations under the License.
         </script>
       </div>
     </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> ebd0353283b026d68e63326fb4a2762e16e794b9
     <form method="POST" enctype="multipart/form-data" action="<%= uploadUrl %>">
-          <p>Type some text:</p>
+          <p>Enter a new message:</p>
           <textarea name="text" id="message-input"></textarea>
           <br/>
           <p>Upload an image:</p>
