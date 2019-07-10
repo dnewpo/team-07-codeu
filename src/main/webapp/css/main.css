@@ -18,7 +18,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 body {
-  max-width: 600px;
   background-color: #edfff6
 }
 
@@ -54,11 +53,17 @@ h2 {
 p {
   font-family: 'Roboto', sans-serif;
   padding-left: 20px;
+  max-width: 600px;
 }
 
 ul {
   font-family: 'Roboto', sans-serif;
 }
+
+
+logStatus {
+  float: right;
+  padding-right: 20px;
 
 .darkbar {
   list-style-type: none;

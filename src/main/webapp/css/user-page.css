@@ -19,6 +19,7 @@
 #message-input {
   height: 100px;
   width: 100%;
+  max-width: 600px;
 }
 
 #map {
@@ -46,6 +47,7 @@ body {
   border: thin solid black;
   border-radius: 5px;
   margin: 20px;
+  max-width: 600px;
 }
 
 /* Add a bottom border to the message header. */
@@ -58,6 +60,15 @@ body {
    isn't too close to the border. */
 .message-body {
   margin: 5px;
+}
+
+/* Aligns the text and the textbox with the rest of the page */
+p {
+  padding: 0px;
+}
+
+form {
+  margin-left: 20px;
 }
 
 /* Use this to hide certain elements like forms if the
