@@ -25,6 +25,7 @@ body {
 nav ul {
   list-style-type: none;
   padding-left: 0;
+  max-width: 1200px;
 }
 
 /* Keep navigation menu on one line. */
@@ -83,4 +84,9 @@ logStatus {
 
 li a:hover {
   background-color: #111;
+}
+
+.pagecontent {
+  max-width: 1200px;
+  margin: auto;
 }
