@@ -138,10 +138,6 @@ limitations under the License.
         </script>
       </div>
     </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> ebd0353283b026d68e63326fb4a2762e16e794b9
     <form method="POST" enctype="multipart/form-data" action="<%= uploadUrl %>">
           <p>Enter a new message:</p>
           <textarea name="text" id="message-input"></textarea>

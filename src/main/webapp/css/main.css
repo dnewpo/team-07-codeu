@@ -18,14 +18,17 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 body {
-  background-color: #edfff6
+  background-color: #edfff6;
+  text-align: center;
 }
 
 /* Remove bullet points from navigation bar. */
 nav ul {
+  width: 100%;
   list-style-type: none;
   padding-left: 0;
   max-width: 1200px;
+  display: inline-block;
 }
 
 /* Keep navigation menu on one line. */
