@@ -44,7 +44,7 @@ body {
 
 /* Give each message a rounded border. */
 .message-div {
-  border: thin solid black;
+  border: thick solid #a2dbbe;
   border-radius: 5px;
   margin: 20px;
   max-width: 600px;
@@ -54,7 +54,6 @@ body {
 /* Add a bottom border to the message header. */
 .message-header {
   font-family: 'Lato', sans-serif;
-  border-bottom: thin solid black;
   padding: 5px;
   background-color: #a2dbbe;
   color: white;

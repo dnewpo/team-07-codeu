@@ -35,6 +35,8 @@ nav ul {
 nav li {
   display: inline-block;
   margin-left: 20px;
+  font-family: 'Lato', sans-serif;
+  font-size: 17px;
 }
 
 nav li a {
@@ -72,6 +74,8 @@ logStatus {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  font-size: 17px;
 }
 
 .darkbar {
@@ -113,4 +117,9 @@ li a:hover {
   font-size: 150px;
   color: white;
   text-shadow: 2px 2px #000000;
+}
+
+.loading {
+  font-family: 'Lato', sans-serif;
+  font-size: 10px;
 }
