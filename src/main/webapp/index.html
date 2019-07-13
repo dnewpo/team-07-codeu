@@ -25,8 +25,12 @@ limitations under the License.
     <script src="/js/public-feed.js"></script>
   </head>
   <body onload="addLoginOrLogoutLinkToNavigation(); buildUI();">
-    <img src="webbanner.png" alt="homepage background"
+    <div class="image">
+      <img src="webbanner.png" alt="homepage background"
     width="1200" height="400">
+    <div class="bottom-left">CheapEats</div>
+    </div>
+   
     <nav>
       <ul id="navigation" class="darkbar">
         <li><a class="barelements" href="/">Home</a></li>
@@ -35,7 +39,6 @@ limitations under the License.
         <li><a class="barelements" href="/community.html">Community Page</a></li>
       </ul>
     </nav>
-    <h1>CheapEats</h1>
     <div id="content">
     <h2>Check out what everyone's eating!</h2>
     <div id="message-container">Loading...</div>

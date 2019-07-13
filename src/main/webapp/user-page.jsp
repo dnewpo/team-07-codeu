@@ -31,6 +31,11 @@ limitations under the License.
     <script src="https://cdn.ckeditor.com/ckeditor5/11.2.0/classic/ckeditor.js"></script>
   </head>
   <body onload="buildUI();">
+    <div class="image">
+      <img src="webbanner.png" alt="homepage background"
+    width="1200" height="400">
+    <div class="bottom-left">CheapEats</div>
+    </div>
     <nav>
       <ul id="navigation" class="darkbar">
         <li><a class="barelements" href="/">Home</a></li>
