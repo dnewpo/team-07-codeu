@@ -50,7 +50,7 @@ limitations under the License.
         <h1 id="page-title">User Page</h1>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <div id="profile-container">
-           <image id="profileImage" src="newUser.jpg" height="350" width="350"/>
+           <image id="profileImage" src="newUser.jpg" />
         </div>
         <script>
         $("#profileImage").click(function(e) {
@@ -68,7 +68,7 @@ limitations under the License.
             fasterPreview( this );
         });
         </script>
-        <input method = "POST" id="imageUpload" type="file"
+        <input id="imageUpload" type="file"
                name="profile_photo" placeholder="Photo" required="" capture>
       </div>
       <div>
