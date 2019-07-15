@@ -82,3 +82,30 @@ form {
 .hidden {
   display: none;
 }
+
+/* Used for user profile image upload */
+#imageUpload
+{
+    display: none;
+}
+
+#profileImage
+{
+    cursor: pointer;
+}
+
+#profile-container {
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+}
+
+#profile-container img {
+    width: 350px;
+    height: 350px;
+}
