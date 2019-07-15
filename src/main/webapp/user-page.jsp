@@ -27,10 +27,11 @@ limitations under the License.
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/user-page.css">
+    <script src="/js/navigation-loader.js"></script>
     <script src="/js/user-page-loader.js"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/11.2.0/classic/ckeditor.js"></script>
   </head>
-  <body onload="buildUI();">
+  <body onload="addLoginOrLogoutLinkToNavigation();buildUI();">
     <nav>
       <ul id="navigation">
         <li><a href="/">Home</a></li>

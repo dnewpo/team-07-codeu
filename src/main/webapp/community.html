@@ -3,6 +3,7 @@
   <head>
     <title>Community Page</title>
     <link rel="stylesheet" href="/css/main.css">
+    <script src="/js/navigation-loader.js"></script>
 
     <script>
 
@@ -41,7 +42,7 @@
       }
     </script>
   </head>
-  <body onload="buildUI()">
+  <body onload="addLoginOrLogoutLinkToNavigation();buildUI()">
     <nav>
       <ul id="navigation">
         <li><a href="/">Home</a></li>
