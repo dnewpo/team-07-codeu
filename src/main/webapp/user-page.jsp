@@ -31,17 +31,24 @@ limitations under the License.
     <script src="/js/user-page-loader.js"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/11.2.0/classic/ckeditor.js"></script>
   </head>
+  
   <body onload="addLoginOrLogoutLinkToNavigation();buildUI();">
+    <div class="image">
+      <img src="webbanner.png" alt="homepage background"
+    width="1200" height="400">
+    <div class="bottom-left">CheapEats</div>
+    </div>
+
     <nav>
-      <ul id="navigation">
-        <li><a href="/">Home</a></li>
-        <li><a href="/aboutus.html">About Our Team</a></li>
-        <li><a href="/maps.html">In The Bay Area?</a></li>
-        <li><a href="/community.html">Community Page</a></li>
+      <ul id="navigation" class="darkbar">
+        <li><a class="barelements" href="/">Home</a></li>
+        <li><a class="barelements" href="/aboutus.html">About Our Team</a></li>
+        <li><a class="barelements" href="/maps.html">Our Map</a></li>
+        <li><a class="barelements" href="/community.html">Community Page</a></li>
       </ul>
     </nav>
-    <!-- This allows the user's image and map to be displayed side by side-->
-    <div class="wrapper">
+     <!-- This allows the user's image and map to be displayed side by side-->
+     <div class="wrapper">
       <div>
         <h1 id="page-title">User Page</h1>
         <img src="newUser.jpg" height="350" width="350">
@@ -54,7 +61,7 @@ limitations under the License.
           /* Editable marker that displays when a user clicks in the map. */
           let editMarker;
           function createMap(){
-            const map = new google.maps.Map(document.getElementById('map'), {
+            map = new google.maps.Map(document.getElementById('map'), {
               center: {lat: 37.422, lng: -122.084},
               zoom: 16
             });
@@ -139,9 +146,8 @@ limitations under the License.
         </script>
       </div>
     </div>
-
     <form method="POST" enctype="multipart/form-data" action="<%= uploadUrl %>">
-          <p>Type some text:</p>
+          <p>Enter a new message:</p>
           <textarea name="text" id="message-input"></textarea>
           <br/>
           <p>Upload an image:</p>
@@ -150,8 +156,9 @@ limitations under the License.
           <button>Submit</button>
         </form>
     <hr/>
-
+  <div id="content">
+    <h2>My Posts</h2>
     <div id="message-container">Loading...</div>
-
+  </div>
   </body>
 </html>

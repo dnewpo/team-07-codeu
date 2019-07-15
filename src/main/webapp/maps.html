@@ -33,14 +33,23 @@
     }
   </style>
 </head>
+  
 <body onload="addLoginOrLogoutLinkToNavigation();createBobaSightingsMap();">
- <nav>
-  <ul id="navigation">
-    <li><a href="/">Home</a></li>
-    <li><a href="/aboutus.html">About Our Team</a></li>
-    <li><a href="/community.html">Community Page</a></li>
-  </ul>
- </nav>
+  <div class="image">
+    <img src="webbanner.png" alt="homepage background"
+    width="1200" height="400">
+  <div class="bottom-left">CheapEats</div>
+  </div>
+  
+  <nav>
+    <ul id="navigation" class="darkbar">
+      <li><a class="barelements" href="/">Home</a></li>
+      <li><a class="barelements" href="/aboutus.html">About Our Team</a></li>
+      <li><a class="barelements" href="/maps.html">In The Bay Area?</a></li>
+      <li><a class="barelements" href="/community.html">Community Page</a></li>
+    </ul>
+  </nav>
+
  <h1>Boba Spots in The Bay Area</h1>
  <div id="map"></div>
 </body>

@@ -22,13 +22,20 @@ limitations under the License.
     <link rel="stylesheet" href="/css/main.css">
     <script src="/js/navigation-loader.js"></script>
   </head>
-  <body onload="addLoginOrLogoutLinkToNavigation();">
+
+  <body onload="addLoginOrLogoutLinkToNavigation(); buildUI();">
+    <div class="image">
+      <img src="webbanner.png" alt="homepage background"
+      width="1200" height="400">
+      <div class="bottom-left">CheapEats</div>
+    </div>
+
     <nav>
-      <ul id="navigation">
-        <li><a href="/">Home</a></li>
-        <li><a href="/aboutus.html">About Our Team</a></li>
-        <li><a href="/maps.html">In The Bay Area?</a></li>
-        <li><a href="/community.html">Community Page</a></li>
+      <ul id="navigation" class="darkbar">
+        <li><a class="barelements" href="/">Home</a></li>
+        <li><a class="barelements" href="/aboutus.html">About Our Team</a></li>
+        <li><a class="barelements" href="/maps.html">In The Bay Area?</a></li>
+        <li><a class="barelements" href="/community.html">Community Page</a></li>
       </ul>
     </nav>
     <h1>About Our Team</h1>
