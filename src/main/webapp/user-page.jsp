@@ -31,6 +31,11 @@ limitations under the License.
     <script src="https://cdn.ckeditor.com/ckeditor5/11.2.0/classic/ckeditor.js"></script>
   </head>
   <body onload="buildUI();">
+    <div class="image">
+      <img src="webbanner.png" alt="homepage background"
+    width="1200" height="400">
+    <div class="bottom-left">CheapEats</div>
+    </div>
     <nav>
       <ul id="navigation" class="darkbar">
         <li><a class="barelements" href="/">Home</a></li>
@@ -53,7 +58,7 @@ limitations under the License.
           /* Editable marker that displays when a user clicks in the map. */
           let editMarker;
           function createMap(){
-            const map = new google.maps.Map(document.getElementById('map'), {
+            map = new google.maps.Map(document.getElementById('map'), {
               center: {lat: 37.422, lng: -122.084},
               zoom: 16
             });
@@ -138,10 +143,6 @@ limitations under the License.
         </script>
       </div>
     </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> ebd0353283b026d68e63326fb4a2762e16e794b9
     <form method="POST" enctype="multipart/form-data" action="<%= uploadUrl %>">
           <p>Enter a new message:</p>
           <textarea name="text" id="message-input"></textarea>
@@ -152,8 +153,9 @@ limitations under the License.
           <button>Submit</button>
         </form>
     <hr/>
-
+  <div id="content">
+    <h2>My Posts</h2>
     <div id="message-container">Loading...</div>
-
+  </div>
   </body>
 </html>

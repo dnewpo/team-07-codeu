@@ -19,6 +19,7 @@
 #message-input {
   height: 100px;
   width: 100%;
+  max-width: 600px;
 }
 
 #map {
@@ -43,21 +44,37 @@ body {
 
 /* Give each message a rounded border. */
 .message-div {
-  border: thin solid black;
+  border: thick solid #a2dbbe;
   border-radius: 5px;
-  margin-top: 20px;
+  margin: 20px;
+  max-width: 600px;
+  background-color: white;
 }
 
 /* Add a bottom border to the message header. */
 .message-header {
-  border-bottom: thin solid black;
+  font-family: 'Lato', sans-serif;
   padding: 5px;
+  background-color: #a2dbbe;
+  color: white;
+  font-size: 16px;
 }
 
 /* Give the message body a margin so the text
    isn't too close to the border. */
 .message-body {
-  margin: 5px;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  margin: 10px;
+}
+
+/* Aligns the text and the textbox with the rest of the page */
+p {
+  padding: 0px;
+}
+
+form {
+  margin-left: 20px;
 }
 
 /* Use this to hide certain elements like forms if the
