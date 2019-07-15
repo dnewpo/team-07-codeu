@@ -35,7 +35,7 @@
 
    const bodyDiv = document.createElement('div');
    bodyDiv.classList.add('message-body');
-   bodyDiv.appendChild(document.createTextNode(message.text));
+   bodyDiv.innerHTML = "<p>"+message.text+"</p>";
 
    const messageDiv = document.createElement('div');
    messageDiv.classList.add("message-div");
@@ -48,4 +48,6 @@
   // Fetch data and populate the UI of the page.
   function buildUI(){
    fetchMessages();
+   const config = {removePlugins: [ 'ImageUpload' ]};
+   ClassicEditor.create(document.getElementById('message-input'), config);
   }
