@@ -42,6 +42,7 @@ limitations under the License.
         <li><a class="barelements" href="/aboutus.html">About Our Team</a></li>
         <li><a class="barelements" href="/maps.html">Our Map</a></li>
         <li><a class="barelements" href="/community.html">Community Page</a></li>
+        <li><a class="barelements" href="/stats.html">Site Stats</a></li>
       </ul>
     </nav>
      <!-- This allows the user's image and map to be displayed side by side-->
