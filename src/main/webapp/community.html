@@ -3,6 +3,7 @@
   <head>
     <title>Community Page</title>
     <link rel="stylesheet" href="/css/main.css">
+    <script src="/js/navigation-loader.js"></script>
 
     <script>
 
@@ -41,12 +42,13 @@
       }
     </script>
   </head>
-  <body onload="buildUI()">
+  <body onload="addLoginOrLogoutLinkToNavigation();buildUI()">
     <div class="image">
       <img src="webbanner.png" alt="homepage background"
       width="1200" height="400">
     <div class="bottom-left">CheapEats</div>
     </div>
+    
     <nav>
       <ul id="navigation" class="darkbar">
         <li><a class="barelements" href="/">Home</a></li>
