@@ -41,12 +41,16 @@
        fetchUserList();
       }
     </script>
+    <style>
+      ul {
+        list-style: none;
+      }
+    </style>
   </head>
   <body onload="addLoginOrLogoutLinkToNavigation();buildUI()">
     <div class="image">
       <img src="webbanner.png" alt="homepage background"
       width="1200" height="400">
-    <div class="bottom-left">CheapEats</div>
     </div>
     
     <nav>
@@ -57,10 +61,10 @@
         <li><a class="barelements" href="/community.html">Community Page</a></li>
       </ul>
     </nav>
-    <div id="content">
+    <div id="content" style="display: inline-block;">
       <h1>Community Page</h1>
       <p>Here is a list of every user who has posted a message:</p>
-      <ul id="list">Loading...</ul>
+      <ul id="list" style="display: inline-block;">Loading...</ul>
     </div>
   </body>
 </html>
