@@ -155,7 +155,7 @@ limitations under the License.
           <button>Submit</button>
         </form>
     <hr/>
-  <div id="content">
+  <div id="content" style="display: inline-block;">
     <h2>My Posts</h2>
     <div id="message-container">Loading...</div>
   </div>
