@@ -51,7 +51,28 @@ limitations under the License.
      <div class="wrapper">
       <div>
         <h1 id="page-title">User Page</h1>
-        <img src="newUser.jpg" height="350" width="350">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <div id="profile-container">
+           <image id="profileImage" src="newUser.jpg" />
+        </div>
+        <script>
+        $("#profileImage").click(function(e) {
+            $("#imageUpload").click();
+        });
+
+        function fasterPreview( uploader ) {
+            if ( uploader.files && uploader.files[0] ){
+                  $('#profileImage').attr('src',
+                     window.URL.createObjectURL(uploader.files[0]) );
+            }
+        }
+
+        $("#imageUpload").change(function(){
+            fasterPreview( this );
+        });
+        </script>
+        <input id="imageUpload" type="file"
+               name="profile_photo" placeholder="Photo" required="" capture>
       </div>
       <div>
         <h1>User Map</h1>
