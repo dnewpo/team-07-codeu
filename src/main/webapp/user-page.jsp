@@ -86,6 +86,13 @@ limitations under the License.
               center: {lat: 37.422, lng: -122.084},
               zoom: 16
             });
+            /* Centers the map to the user's current location. */
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+                    map.setCenter(initialLocation);
+                });
+            }
             // When the user clicks in the map, show a marker with a text box the user can edit.
             map.addListener('click', (event) => {
               createMarkerForEdit(event.latLng.lat(), event.latLng.lng());
