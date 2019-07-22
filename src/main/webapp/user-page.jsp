@@ -31,7 +31,7 @@ limitations under the License.
     <script src="/js/user-page-loader.js"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/11.2.0/classic/ckeditor.js"></script>
   </head>
-  
+
   <body onload="addLoginOrLogoutLinkToNavigation();buildUI();">
     <div class="image">
       <img src="webbanner.png" alt="homepage background"
@@ -75,7 +75,7 @@ limitations under the License.
                name="profile_photo" placeholder="Photo" required="" capture>
       </div>
       <div>
-        <h1>User Map</h1>
+        <h1>My Map</h1>
         <div id="map"></div>
         <script>
           let map;
@@ -86,6 +86,13 @@ limitations under the License.
               center: {lat: 37.422, lng: -122.084},
               zoom: 16
             });
+            /* Centers the map to the user's current location. */
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+                    map.setCenter(initialLocation);
+                });
+            }
             // When the user clicks in the map, show a marker with a text box the user can edit.
             map.addListener('click', (event) => {
               createMarkerForEdit(event.latLng.lat(), event.latLng.lng());
@@ -168,7 +175,8 @@ limitations under the License.
       </div>
     </div>
     <form method="POST" enctype="multipart/form-data" action="<%= uploadUrl %>">
-          <p>Enter a new message:</p>
+          <p>Share your favorite food or a meal you recently ate. Don't forget to
+          add your favorite restaurants to your map!</p>
           <textarea name="text" id="message-input"></textarea>
           <br/>
           <p>Upload an image:</p>
